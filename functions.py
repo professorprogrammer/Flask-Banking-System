@@ -33,10 +33,3 @@ class Bank(User):
   def view_money(self):
     return str(self.balance)
 
-
-proff = Bank('proff')
-print(proff.show_details())
-print(proff.deposit(1000))
-print(proff.show_details())
-print(proff.withdraw(100))
-print(proff.show_details())
