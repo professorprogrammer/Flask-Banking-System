@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% if 'user' in session %}
+<head>
+  <title>Your Account</title>
+</head>
+
+<div class="container px-5">
+  <div class="container p-5">
+    <div class="container p-5">
+      <div class="container p-5">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4 p-5">
+              <img src="/static/images/users.png" height="100"  width="100" alt="..." class="center">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Account Information</h5>
+                <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <form method="post">
+
+                    <b>Username: </b>
+                    
+                    
+                    
+                    <li class="list-group-item"><input type="text" placeholder="" value="{{session['user']}}" class="form-control" id="username" name = "username" readonly></li></li>
+                    
+          
+                    <b>Balance: </b>
+
+                    <li class="list-group-item"><input type="text" placeholder="0" value='{{money}}' class="form-control" id="username" name = "username" readonly></li></li>
+  
+                  </form>
+                </ul>
+               </div>
+               
+               <hr>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% else %}
+
+<body>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Online Bank</h1>
+          <p class="lead text-muted">Login to use the amazing banking website.</p>
+          <p>
+            <a href="/register" class="btn btn-primary my-2">signup</a>
+            <a href="/login" class="btn btn-secondary my-2">login</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="/static/images/investment.jpg" >
+                <div class="card-body">
+                  <p class="card-text">Investment.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-primary">Learn More.</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="/static/images/piggybank.jpg">
+                <div class="card-body">
+                  <p class="card-text">Savings.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-primary">Learn More.</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="/static/images/insurance.jpg">
+                <div class="card-body">
+                  <p class="card-text">Insurance.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-primary">Learn More.</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+    </header>
+{% endif%}
+    
+
+ 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  
+
+<svg xmlns="http://www.w3.org/2000/svg" width="508" height="225" viewBox="0 0 508 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg></body>
+
+</div>
+{% endblock %}

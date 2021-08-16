@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+This is the deposit page
+<br>
+<hr>
+<div class="container">
+  <form action = '/deposit' method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Deposit amount</label>
+      <input type="text" name="deposit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
